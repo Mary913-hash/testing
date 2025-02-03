@@ -1,0 +1,100 @@
+.contact-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-form-container {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 16px;
+  width: 48%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  margin-top: 0; /* Remove extra margin */
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form-container input::placeholder,
+.contact-form-container textarea::placeholder {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.contact-form-container button {
+  background-color: rgb(95, 6, 6);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form-container button:hover {
+  background-color: rgb(112, 2, 2);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align elements at the top */
+  width: 48%;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Decrease space between contact details and form */
+}
+
+.contact-details h3,
+.contact-details h4 {
+  margin-top: 0;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Smaller gap between icon and text */
+  margin: 5px 0; /* Reduced margin for tighter spacing */
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: rgb(100, 5, 5);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: rgb(105, 5, 5);
+}

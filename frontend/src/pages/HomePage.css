@@ -1,0 +1,72 @@
+/* Fullscreen video background */
+.home-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Video should cover the entire background */
+.home-page-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content displayed above the video */
+.home-page-content {
+  position: absolute;
+  top: 30%; /* Adjust this to move the content vertically */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: dark rgb(70, 5, 5);
+  z-index: 1;
+  padding: 20px; 
+  border-radius: 10px;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Content styling */
+.home-page-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white; /* Cursor effect */
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+.home-page-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white; /* Cursor effect */
+  animation: typing 4s steps(40) 4s forwards, blink 0.75s step-end infinite;
+}

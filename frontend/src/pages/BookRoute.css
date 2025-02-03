@@ -1,0 +1,124 @@
+/* Wrapper for Create Booking and Existing Bookings side by side */
+.booking-container {
+  display: flex;
+  justify-content: space-between; /* Space out the two sections */
+  gap: 40px; /* Space between the sections */
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+/* Existing Booking section (Booking List) */
+.booking-list {
+  display: flex; /* Enable flexbox */
+  flex-wrap: wrap; /* Allow items to wrap if there's not enough space */
+  gap: 20px; /* Space between items */
+  list-style: none;
+  padding: 0;
+  justify-content: flex-start; /* Align items to the left */
+  width: 100%; /* Full width to ensure it uses all the available space */
+  flex-direction: row; /* Ensure the items are in a row */
+}
+
+/* Each booking item */
+.booking-item {
+  display: flex;
+  flex-direction: column; /* Keep the content in a column within the item */
+  width: 250px; /* Set a fixed width for each booking item */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* Light background for each booking item */
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+/* Hover effect on booking items */
+.booking-item:hover {
+  transform: translateY(-5px); /* Slightly lift the item on hover */
+}
+
+/* Ensure the action buttons are visible */
+.booking-actions {
+  width: 100%; /* Full width to ensure buttons are visible */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Add spacing above the buttons */
+}
+
+/* Styling for the form container */
+.create-booking {
+  width: 35%; /* Adjusted width for the form */
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px; /* Ensure the form doesn’t get too wide */
+  margin: 0 auto; /* Center the form */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 1.1rem; /* Slightly larger text for readability */
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px; /* Increase padding for better clickability */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease; /* Smooth border color change on focus */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4CAF50; /* Highlight with green when focused */
+}
+
+.submit-button {
+  background-color: #4CAF50; /* More neutral green */
+  color: white;
+  padding: 12px 20px; /* Slightly larger button */
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Slightly darker green */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.submit-button:active {
+  transform: scale(1); /* Ensure the button returns to normal size on click */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .booking-container {
+    flex-direction: column; /* Stack vertically on small screens */
+    align-items: center; /* Center the sections */
+  }
+
+  .create-booking,
+  .booking-list {
+    width: 90%; /* Full width for both sections on small screens */
+    margin-bottom: 20px;
+  }
+
+  .booking-actions {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    width: 100%;
+    align-items: center;
+  }
+}
